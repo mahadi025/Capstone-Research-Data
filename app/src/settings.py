@@ -1,6 +1,8 @@
 from pathlib import Path
 import os
+from dotenv import load_dotenv
 
+load_dotenv()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -73,9 +75,9 @@ WSGI_APPLICATION = "src.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.mysql",
-        "NAME": "Capstone",
-        "USER": "root",
-        "PASSWORD": "159753",
+        "NAME": os.environ.get("DB_NAME"),
+        "USER": os.environ.get("DB_USER"),
+        "PASSWORD": os.environ.get("DB_PASSWORD"),
         "HOST": "localhost",
         "OPTIONS": {"init_command": "SET foreign_key_checks = 0;"},
     }
