@@ -119,18 +119,8 @@ USE_I18N = True
 
 USE_TZ = True
 
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/4.2/howto/static-files/
-
-# STATIC_URL = "/static/static/"
-# MEDIA_URL = "/static/media/"
-
-# MEDIA_ROOT = "/vol/web/media"
-# STATIC_ROOT = "/vol/web/static"
-
 STATIC_URL = "/static/"
-# STATIC_ROOT = os.path.join(BASE_DIR, "static")
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "reactapp/build/static"),
@@ -145,6 +135,5 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 REST_FRAMEWORK = {
     "DEFAULT_FILTER_BACKENDS": ["django_filters.rest_framework.DjangoFilterBackend"],
 }
-
 
 CORS_ALLOW_ALL_ORIGINS = True
