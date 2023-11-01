@@ -64,7 +64,7 @@ function ResearchDataPage() {
                     value={filterValues.model_name}
                     onChange={handleInputChange}
                 >
-                    <option value="">Dataset</option>
+                    <option value="">Model Name</option>
                     <option value="MobileNetV3Small">MobileNetV3Small</option>
                     <option value="EfficientNetB3">EfficientNetB3</option>
                     <option value="ResNet50">ResNet50</option>
