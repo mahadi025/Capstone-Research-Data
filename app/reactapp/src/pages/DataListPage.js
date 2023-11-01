@@ -102,6 +102,37 @@ function ResearchDataPage() {
                     <option value="64">64</option>
                     <option value="128">128</option>
                 </select>
+                <select
+                    name="learning_rate"
+                    value={filterValues.learning_rate}
+                    onChange={handleInputChange}
+                >
+                    <option value="">Learning Rate</option>
+                    <option value="0.001">0.001</option>
+                    <option value="0.005">0.005</option>
+                </select>
+                <select
+                    name="optimizer"
+                    value={filterValues.optimizer}
+                    onChange={handleInputChange}
+                >
+                    <option value="">Optimizer</option>
+                    <option value="Adam">Adam</option>
+                    <option value="Adamax">Adamax</option>
+                    <option value="RMSprop">RMSprop</option>
+                </select>
+                <select
+                    name="dropout"
+                    value={filterValues.dropout}
+                    onChange={handleInputChange}
+                >
+                    <option value="">Dropout</option>
+                    <option value="0.2">0.2</option>
+                    <option value="0.3">0.3</option>
+                    <option value="0.4">0.4</option>
+                    <option value="0.5">0.5</option>
+                </select>
+
                 <button type="submit" className="">Apply Filters</button>
             </form>
 
