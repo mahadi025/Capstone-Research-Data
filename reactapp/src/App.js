@@ -7,6 +7,10 @@ import './App.css';
 import Header from './components/Header';
 import DataPage from "./pages/DataPage";
 import DataListPage from './pages/DataListPage';
+import { useTable } from "react-table";
+
+
+
 function App() {
   return (
     <Router>

@@ -2,6 +2,8 @@ import { Link, useParams, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from "react";
 import { ReactComponent as ArrowLeft } from '../assets/arrow-left.svg'
 
+
+
 export default function DataPage() {
     let { id } = useParams();
     let navigate = useNavigate();
