@@ -47,6 +47,7 @@ class CapstoneData(models.Model):
     )
     dropout = models.CharField(
         max_length=5,
+        choices=(("0.2", "0.2"), ("0.3", "0.3"), ("0.4", "0.4"), ("0.5", "0.5")),
         blank=True,
     )
     dataset = models.CharField(
@@ -59,7 +60,7 @@ class CapstoneData(models.Model):
                 "Original+Augmentation+Image Processing",
             ),
         ),
-        default="Smote+Original+Image Processing",
+        default="Original+Image Processing",
     )
     training_accuracy = models.CharField(max_length=3, blank=True)
     validation_accuracy = models.CharField(max_length=3, blank=True)
@@ -71,5 +72,14 @@ class CapstoneData(models.Model):
         null=True, blank=True, upload_to=graph_loss_image_file_path
     )
 
+    class Meta:
+        verbose_name_plural = "CapstoneData"
+
     def __str__(self):
-        return self.model_name + "-" + self.dataset
+        return (
+            self.model_name
+            + "-"
+            + f"({self.dataset})"
+            + "-"
+            + f"({self.batch_size},{self.epochs},{self.learning_rate},{self.dropout},{self.optimizer})-({self.training_accuracy},{self.validation_accuracy},{self.testing_accuracy})"
+        )
