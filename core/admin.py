@@ -1,4 +1,4 @@
 from django.contrib import admin
-from .models import TransferLearningModel
+from .models import CapstoneData
 
-admin.site.register(TransferLearningModel)
+admin.site.register(CapstoneData)

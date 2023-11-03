@@ -18,16 +18,16 @@ def graph_loss_image_file_path(instance, filename):
     return os.path.join("uploads", "graph", "loss", filename)
 
 
-class TransferLearningModel(models.Model):
+class CapstoneData(models.Model):
     model_name = models.CharField(
         max_length=255,
-        # choices=(
-        #     ("MobileNetV3Small", "MobileNetV3Small"),
-        #     ("ResNet50", "ResNet50"),
-        #     ("EffecientNetB3", "EffecientNetB3"),
-        #     ("VGG19", "VGG19"),
-        #     ("XceptionNet", "XceptionNet"),
-        # ),
+        choices=(
+            ("MobileNetV3Small", "MobileNetV3Small"),
+            ("ResNet50", "ResNet50"),
+            ("EffecientNetB3", "EffecientNetB3"),
+            ("VGG19", "VGG19"),
+            ("XceptionNet", "XceptionNet"),
+        ),
     )
     batch_size = models.CharField(
         max_length=4,
