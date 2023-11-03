@@ -1,10 +1,10 @@
 from rest_framework import serializers
-from core.models import TransferLearningModel
+from core.models import CapstoneData
 
 
-class TransferLearningModelSerializer(serializers.ModelSerializer):
+class CapstoneDataSerializer(serializers.ModelSerializer):
     class Meta:
-        model = TransferLearningModel
+        model = CapstoneData
         fields = [
             "id",
             "model_name",

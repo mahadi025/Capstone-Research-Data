@@ -1,13 +1,9 @@
-from django.urls import path, include
+from django.urls import path
 from . import views
-from rest_framework import routers
 
-router = routers.DefaultRouter()
-router.register(
-    "capstone",
-    views.GetMethod,
-)
+
 urlpatterns = [
-    path("", include(router.urls)),
+    path("", views.getRoutes, name="routes"),
+    path("capstone-data/", views.getList, name="capstone-data-list"),
+    path("capstone-data/<str:pk>/", views.getData, name="capstone-data"),
 ]
-app_name = "capstone"
