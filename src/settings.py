@@ -11,10 +11,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-r!s)q0_w_x&naba4uh#9-d0b3ylel5ydk_vqg6biho(_$jp*9x"
+SECRET_KEY = os.getenv("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["*", ".vercel.app", ".netlify.app"]
 
@@ -31,7 +31,6 @@ INSTALLED_APPS = [
     "core",
     "rest_framework",
     "corsheaders",
-    "django_filters",
     "api",
 ]
 
