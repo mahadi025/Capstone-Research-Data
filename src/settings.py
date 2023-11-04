@@ -31,7 +31,6 @@ INSTALLED_APPS = [
     "core",
     "rest_framework",
     "corsheaders",
-    "django_filters",
     "api",
 ]
 
@@ -121,10 +120,5 @@ STATIC_ROOT = os.path.join(BASE_DIR, "static")
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
-
-
-REST_FRAMEWORK = {
-    "DEFAULT_FILTER_BACKENDS": ["django_filters.rest_framework.DjangoFilterBackend"],
-}
 
 CORS_ALLOW_ALL_ORIGINS = True
